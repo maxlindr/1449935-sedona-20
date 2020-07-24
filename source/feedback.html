@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+<body>
+
+  <header class="page-header">
+    <nav class="nav-menu">
+      <h2 class="visually-hidden">Навигационное меню</h2>
+      <button class="nav-menu__close-btn" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <ul class="nav-menu__list">
+        <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Главная</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="photo-video.html">Фото и видео</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link">Форма отзыва</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+      </ul>
+    </nav>
+    <div class="page-top-bar">
+      <img class="page-top-bar__logo" src="https://via.placeholder.com/102x84" alt="Логотип City of Sedona" width="102" height="84">
+      <button class="page-top-bar__open-btn" type="button" hidden>Меню</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title page-title--secondary">
+      <h2 class="visually-hidden">Sedona</h2>
+      <img class="page-title__image" src="#" alt="">
+    </section>
+    <section class="page-intro">
+      <h1 class="page-intro__title">Оставьте свой отзыв</h1>
+      <p class="page-intro__body">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </section>
+    <form class="form" action="#" method="post" autocomplete="off">
+      <fieldset class="fieldset">
+        <h2 class="fieldset__legend">Представьтесь:</h2>
+        <div class="fieldset__text-field text-field">
+          <label class="text-field__label" for="name">Имя*:</label>
+          <input class="text-field__input" type="text" name="name" id="name" placeholder="Петр" required>
+        </div>
+        <div class="fieldset__text-field text-field">
+          <label class="text-field__label" for="surname">Фамилия*:</label>
+          <input class="text-field__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+        </div>
+        <div class="fieldset__text-field text-field">
+          <label class="text-field__label" for="middleName">Отчество:</label>
+          <input class="text-field__input" type="text" name="middleName" id="middleName" placeholder="Александрович">
+        </div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <h2 class="fieldset__legend">Контактная информация:</h2>
+        <div class="fieldset__text-field text-field text-field--column">
+          <label class="text-field__label text-field__label--column" for="tel">Контактный телефон*:</label>
+          <input class="text-field__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+        </div>
+        <div class="fieldset__text-field text-field text-field--column">
+          <label class="text-field__label text-field__label--column" for="email">Электронная почта*:</label>
+          <input class="text-field__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+        </div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <h2 class="fieldset__legend">Ваше общее впечатление:</h2>
+        <ul class="radio-list">
+          <li class="radio">
+            <input class="visually-hidden" type="radio" name="impression" value="positive" id="positive" checked>
+            <span class="radio__decorator"></span>
+            <label class="radio__label" for="positive">Скорее положительное</label>
+          </li>
+          <li class="radio">
+              <input class="visually-hidden" type="radio" name="impression" value="negative" id="negative">
+              <span class="radio__decorator"></span>
+              <label class="radio__label" for="negative">Скорее отрицательное</label>
+          </li>
+          <li class="radio">
+              <input class="visually-hidden" type="radio" name="impression" value="noanswer" id="noanswer">
+              <span class="radio__decorator"></span>
+              <label class="radio__label" for="noanswer">Затрудняюсь ответить</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="fieldset">
+        <h2 class="fieldset__legend">Посещенные достопримечательности:</h2>
+        <ul class="checkbox-list">
+          <li class="checkbox">
+            <input class="visually-hidden" type="checkbox" name="devilbridge" id="devilbridge" checked>
+            <span class="checkbox__decorator"></span>
+            <label class="checkbox__label" for="devilbridge">Мост Дьявола</label>
+          </li>
+          <li class="checkbox">
+            <input class="visually-hidden" type="checkbox" name="bellrock" id="bellrock" checked>
+            <span class="checkbox__decorator"></span>
+            <label class="checkbox__label" for="bellrock">Гора-Колокол</label>
+          </li>
+          <li class="checkbox">
+            <input class="visually-hidden" type="checkbox" name="slidepark" id="slidepark" checked>
+            <span class="checkbox__decorator"></span>
+            <label class="checkbox__label" for="slidepark">Слайд-парк</label>
+          </li>
+          <li class="checkbox">
+            <input class="visually-hidden" type="checkbox" name="redrocks" id="redrocks">
+            <span class="checkbox__decorator"></span>
+            <label class="checkbox__label" for="redrocks">Красные скалы</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="fieldset">
+        <h2 class="fieldset__legend">Опишите свои эмоции:</h2>
+        <textarea class="text-area" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
+      <button class="button button--general" type="submit">Отправить отзыв</button>
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <section class="social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <p class="social__hashtag" aria-label="хэштег">#VISITSEDONA</p>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <div class="developed-by">
+      <span class="developed-by__developed">Разработано</span>
+      <a class="developed-by__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">в HTML Academy</span>
+        <!-- здесь будел SVG логотипа html academy -->
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
