@@ -33,34 +33,34 @@
       <p class="page-intro__body">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
     <form class="form" action="#" method="post" autocomplete="off">
-      <fieldset class="fieldset">
-        <h2 class="fieldset__legend">Представьтесь:</h2>
-        <div class="fieldset__text-field text-field">
+      <fieldset class="form__fieldset">
+        <h2 class="form__fieldset-title">Представьтесь:</h2>
+        <div class="form__text-field text-field">
           <label class="text-field__label" for="name">Имя*:</label>
           <input class="text-field__input" type="text" name="name" id="name" placeholder="Петр" required>
         </div>
-        <div class="fieldset__text-field text-field">
+        <div class="form__text-field text-field">
           <label class="text-field__label" for="surname">Фамилия*:</label>
           <input class="text-field__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
         </div>
-        <div class="fieldset__text-field text-field">
+        <div class="form__text-field text-field">
           <label class="text-field__label" for="middleName">Отчество:</label>
           <input class="text-field__input" type="text" name="middleName" id="middleName" placeholder="Александрович">
         </div>
       </fieldset>
-      <fieldset class="fieldset">
-        <h2 class="fieldset__legend">Контактная информация:</h2>
-        <div class="fieldset__text-field text-field text-field--column">
+      <fieldset class="form__fieldset">
+        <h2 class="form__fieldset-title">Контактная информация:</h2>
+        <div class="form__text-field text-field text-field--column">
           <label class="text-field__label text-field__label--column" for="tel">Контактный телефон*:</label>
           <input class="text-field__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
         </div>
-        <div class="fieldset__text-field text-field text-field--column">
+        <div class="form__text-field text-field text-field--column">
           <label class="text-field__label text-field__label--column" for="email">Электронная почта*:</label>
           <input class="text-field__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
         </div>
       </fieldset>
-      <fieldset class="fieldset">
-        <h2 class="fieldset__legend">Ваше общее впечатление:</h2>
+      <fieldset class="form__fieldset">
+        <h2 class="form__fieldset-title">Ваше общее впечатление:</h2>
         <ul class="radio-list">
           <li class="radio">
             <input class="visually-hidden" type="radio" name="impression" value="positive" id="positive" checked>
@@ -79,8 +79,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="fieldset">
-        <h2 class="fieldset__legend">Посещенные достопримечательности:</h2>
+      <fieldset class="form__fieldset">
+        <h2 class="form__fieldset-title">Посещенные достопримечательности:</h2>
         <ul class="checkbox-list">
           <li class="checkbox">
             <input class="visually-hidden" type="checkbox" name="devilbridge" id="devilbridge" checked>
@@ -104,8 +104,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="fieldset">
-        <h2 class="fieldset__legend">Опишите свои эмоции:</h2>
+      <fieldset class="form__fieldset">
+        <h2 class="form__fieldset-title">Опишите свои эмоции:</h2>
         <textarea class="text-area" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <button class="button button--general" type="submit">Отправить отзыв</button>
