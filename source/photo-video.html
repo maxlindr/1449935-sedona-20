@@ -93,7 +93,36 @@
       <h2 class="visually-hidden">Видеопрезентация</h2>
       <p class="video-presentation__title">Все еще сомневаетесь?</p>
       <p class="video-presentation__body">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <!-- Здесь будет контейнер с видео -->
+      <div class="video">
+        <video class="video__video" src="#" controls></video>
+        <div class="video__inner-controls" hidden>
+          <button class="video__replay" type="button">
+            <span class="visually-hidden">Смотреть заново</span>
+          </button>
+          <!-- Progress bar -->
+          <div class="video__time-controls">
+            <div class="video__progressbar"></div>
+            <div class="video__pin" tabindex="0"></div>
+          </div>
+          <button class="video__cc" type="button">
+            <span class="visually-hidden">Субтитры</span>
+          </button>
+          <button class="video__fullscreen" type="button">
+            <span class="visually-hidden">Полноэкранный режим</span>
+          </button>
+        </div>
+      </div>
+      <div class="video__outer-controls" hidden>
+        <button class="video__replay" type="button">
+          <span class="visually-hidden">Смотреть заново</span>
+        </button>
+        <button class="video__cc" type="button">
+          <span class="visually-hidden">Субтитры</span>
+        </button>
+        <button class="video__fullscreen" type="button">
+          <span class="visually-hidden">Полноэкранный режим</span>
+        </button>
+      </div>
     </section>
   </main>
 
