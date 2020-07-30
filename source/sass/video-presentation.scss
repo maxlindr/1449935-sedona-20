@@ -1,0 +1,25 @@
+@import 'color';
+
+.video-presentation {
+  padding-top: 32px;
+  padding-bottom: 49px;
+  text-align: center;
+}
+
+.video-presentation__title {
+  margin: 0 26px 27px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.video-presentation__body {
+  margin: 0 26px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-gray;
+}
+
+.video-presentation__video {
+  margin-top: 33px;
+}

@@ -1,0 +1,79 @@
+@import 'color';
+
+$border-color: #E5E5E5;
+$item-border: 1px solid $border-color;
+
+.gallery {
+
+}
+
+.gallery__list {
+  @extend %list-reset
+}
+
+.gallery__item {
+  padding: 22px 20px 21px;
+  border-top: $item-border;
+}
+
+.gallery__item:last-child {
+  border-bottom: $item-border;
+}
+
+.gallery__figure {
+  margin: 0;
+}
+
+.gallery__image {
+  width: 100%;
+}
+
+.gallery__image-link {
+  display: block;
+  line-height: 0;
+}
+
+.gallery__figcaption {
+  margin-top: 11px;
+}
+
+.gallery__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.gallery__author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: none;
+  color: $dark-gray;
+}
+
+.gallery__like-block {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.gallery__like-button {
+  margin-right: 14px;
+  opacity: 0.3;
+}
+
+.gallery__like-button::before {
+  display: block;
+  width: 23px;
+  height: 21px;
+  content: '';
+  background-image: url(../img/icon-like.svg);
+  background-repeat: no-repeat;
+}
+
+.gallery__likes-counter {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+.page-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title::before {
+  position: absolute;
+  display: block;
+  width: 282px;
+  height: 214px;
+  content: '';
+  background-image: url(../img/page-title.svg);
+}
+
+.page-title::after {
+  position: absolute;
+  display: block;
+  width: 1201px;
+  height: 57px;
+  content: '';
+  bottom: 0;
+  background-image: url(../img/bg-intro-triangle-desktop.svg);
+}
+
+.page-title--secondary {
+  height: 158px;
+  overflow: hidden;
+}
+
+.page-title--secondary::before {
+  position: absolute;
+  display: block;
+  width: 229px;
+  height: 39px;
+  content: '';
+  background-image: url(../img/text-sedona.svg);
+  background-size: cover;
+}
+
+// image
+
+.page-title__image {
+  background-color: rgb(219, 233, 242);
+  height: 389px;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.page-title__image--secondary {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}

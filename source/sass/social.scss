@@ -1,0 +1,70 @@
+@import 'color';
+
+.social {
+  margin-top: 34px;
+  margin-bottom: 40px;
+}
+
+.social__list {
+  @extend %list-reset;
+  display: flex;
+  justify-content: center;
+}
+
+.social__item + .social__item {
+  margin-left: 6px;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 47px;
+  height: 48px;
+  background-color: $basic-blue;
+
+  &:hover, &:focus {
+    background-color: $basic-blue-2;
+  }
+
+  &:active {
+    background-color: $basic-blue-3;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+%icon {
+  position: absolute;
+  display: block;
+  content: '';
+  background-size: contain;
+}
+
+.social__link--twitter::before {
+  @extend %icon;
+  left: 14px;
+  top: 16px;
+  width: 18px;
+  height: 15px;
+  background-image: url(../img/icon-twitter.svg);
+}
+
+.social__link--facebook::before {
+  @extend %icon;
+  left: 19px;
+  top: 13px;
+  width: 9px;
+  height: 19px;
+  background-image: url(../img/icon-facebook.svg);
+}
+
+.social__link--youtube::before {
+  @extend %icon;
+  left: 13px;
+  top: 17px;
+  width: 20px;
+  height: 14px;
+  background-image: url(../img/icon-youtube.svg);
+}

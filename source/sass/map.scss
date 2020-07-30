@@ -1,0 +1,24 @@
+@import 'color';
+
+.map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map::before {
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 27px;
+  box-sizing: border-box;
+  content: '';
+  background-color: $basic-blue;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.map__static-map {
+  width: 100%;
+}
