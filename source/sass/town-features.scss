@@ -1,11 +1,18 @@
-@import 'color';
+@import "color";
+
+@mixin icon {
+  position: absolute;
+  display: block;
+  content: "";
+  background-size: contain;
+}
 
 .town-features {
   padding: 35px 40px 35px 0;
 }
 
 .town-features__list {
-  @extend %list-reset;
+  @include list-reset;
 }
 
 .town-features__item {
@@ -22,7 +29,6 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-
 }
 
 .town-feature__description {
@@ -32,36 +38,29 @@
   font-weight: normal;
 }
 
-%icon {
-  position: absolute;
-  display: block;
-  content: '';
-  background-size: contain;
-}
-
 .town-features__item--housing::before {
-  @extend %icon;
+  @include icon;
   left: -48px;
   top: -9px;
   width: 39px;
   height: 37px;
-  background-image: url(../img/icon-house.svg);
+  background-image: url("../img/icon-house.svg");
 }
 
 .town-features__item--souvenirs::before {
-  @extend %icon;
+  @include icon;
   left: -45px;
   top: -11px;
   width: 32px;
   height: 38px;
-  background-image: url(../img/icon-gift.svg);
+  background-image: url("../img/icon-gift.svg");
 }
 
 .town-features__item--food::before {
-  @extend %icon;
+  @include icon;
   left: -52px;
   top: -5px;
   width: 40px;
   height: 35px;
-  background-image: url(../img/icon-burger.svg);
+  background-image: url("../img/icon-burger.svg");
 }

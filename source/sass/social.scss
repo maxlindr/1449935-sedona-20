@@ -1,4 +1,11 @@
-@import 'color';
+@import "color";
+
+@mixin icon {
+  position: absolute;
+  display: block;
+  content: "";
+  background-size: contain;
+}
 
 .social {
   margin-top: 34px;
@@ -6,7 +13,7 @@
 }
 
 .social__list {
-  @extend %list-reset;
+  @include list-reset;
   display: flex;
   justify-content: center;
 }
@@ -22,7 +29,8 @@
   height: 48px;
   background-color: $basic-blue;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $basic-blue-2;
   }
 
@@ -35,36 +43,29 @@
   }
 }
 
-%icon {
-  position: absolute;
-  display: block;
-  content: '';
-  background-size: contain;
-}
-
 .social__link--twitter::before {
-  @extend %icon;
+  @include icon;
   left: 14px;
   top: 16px;
   width: 18px;
   height: 15px;
-  background-image: url(../img/icon-twitter.svg);
+  background-image: url("../img/icon-twitter.svg");
 }
 
 .social__link--facebook::before {
-  @extend %icon;
+  @include icon;
   left: 19px;
   top: 13px;
   width: 9px;
   height: 19px;
-  background-image: url(../img/icon-facebook.svg);
+  background-image: url("../img/icon-facebook.svg");
 }
 
 .social__link--youtube::before {
-  @extend %icon;
+  @include icon;
   left: 13px;
   top: 17px;
   width: 20px;
   height: 14px;
-  background-image: url(../img/icon-youtube.svg);
+  background-image: url("../img/icon-youtube.svg");
 }

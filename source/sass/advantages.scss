@@ -1,11 +1,11 @@
-@import 'color';
+@import "color";
 
 .advantages {
-
+  //
 }
 
 .advantages__list {
-  @extend %list-reset;
+  @include list-reset;
 }
 
 .advantages__header {
@@ -28,7 +28,7 @@
 .advantages__item--secondary {
   position: relative;
   padding: 26px 26px 24px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 
   &:not(:last-child)::after {
     position: absolute;
@@ -37,8 +37,8 @@
     bottom: 0;
     display: block;
     height: 1px;
-    background-color: #D6D6D6;
-    content: '';
+    background-color: #d6d6d6;
+    content: "";
   }
 }
 
@@ -63,16 +63,17 @@
   font-weight: normal;
   text-align: center;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     display: inline;
   }
 
   &::before {
-    content: '— ';
+    content: "— ";
   }
 
   &::after {
-    content: ' —';
+    content: " —";
   }
 }
 

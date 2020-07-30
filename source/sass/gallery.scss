@@ -1,14 +1,14 @@
-@import 'color';
+@import "color";
 
-$border-color: #E5E5E5;
+$border-color: #e5e5e5;
 $item-border: 1px solid $border-color;
 
 .gallery {
-
+  //
 }
 
 .gallery__list {
-  @extend %list-reset
+  @include list-reset;
 }
 
 .gallery__item {
@@ -67,8 +67,8 @@ $item-border: 1px solid $border-color;
   display: block;
   width: 23px;
   height: 21px;
-  content: '';
-  background-image: url(../img/icon-like.svg);
+  content: "";
+  background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
 }
 

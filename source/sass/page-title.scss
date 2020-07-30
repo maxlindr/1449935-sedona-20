@@ -10,8 +10,8 @@
   display: block;
   width: 282px;
   height: 214px;
-  content: '';
-  background-image: url(../img/page-title.svg);
+  content: "";
+  background-image: url("../img/page-title.svg");
 }
 
 .page-title::after {
@@ -19,9 +19,9 @@
   display: block;
   width: 1201px;
   height: 57px;
-  content: '';
+  content: "";
   bottom: 0;
-  background-image: url(../img/bg-intro-triangle-desktop.svg);
+  background-image: url("../img/bg-intro-triangle-desktop.svg");
 }
 
 .page-title--secondary {
@@ -34,8 +34,8 @@
   display: block;
   width: 229px;
   height: 39px;
-  content: '';
-  background-image: url(../img/text-sedona.svg);
+  content: "";
+  background-image: url("../img/text-sedona.svg");
   background-size: cover;
 }
 

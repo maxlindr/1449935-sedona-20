@@ -1,4 +1,4 @@
-@import 'color';
+@import "color";
 
 .map {
   position: relative;
@@ -13,7 +13,7 @@
   width: 27px;
   height: 27px;
   box-sizing: border-box;
-  content: '';
+  content: "";
   background-color: $basic-blue;
   border: 5px solid white;
   border-radius: 50%;
