@@ -3,6 +3,10 @@
 $indent: 22px;
 $input-border-width: 4px;
 
+@mixin zero-width {
+  width: 0; // магия, усмиряющая непомерный рост input в ширину, когда он находится в одной строке с другими элементами.
+}
+
 @mixin text-field-icon {
   position: absolute;
   content: "";
@@ -53,13 +57,13 @@ $input-border-width: 4px;
 }
 
 .text-field__input--inline {
-  width: 0; // магия, усмиряющая непомерный рост input в ширину, когда он находится в одной строке с другими элементами.
+  @include zero-width;
 }
 
 // иконка для input добавляется отдельным элементом, а это значит, что input теперь не один в строке
 // значит, нужно применить fix для строчных input
 .text-field__icon-wrapper .text-field__input {
-  @include text-field__input--inline;
+  @include zero-width;
 }
 
 .text-field__input:hover {
