@@ -3,10 +3,6 @@
 $indent: 22px;
 $input-border-width: 4px;
 
-@mixin zero-width {
-  width: 0; // магия, усмиряющая непомерный рост input в ширину, когда он находится в одной строке с другими элементами.
-}
-
 @mixin text-field-icon {
   position: absolute;
   content: "";
@@ -45,7 +41,7 @@ $input-border-width: 4px;
   padding-right: $indent - $input-border-width;
   padding-bottom: 14px - $input-border-width;
   min-width: 0;
-  flex-grow: 1;
+  width: 100%;
 
   font-size: 18px;
   line-height: 26px;
@@ -54,16 +50,6 @@ $input-border-width: 4px;
   background-color: $input-bg-color;
   border: $input-border-width solid $input-bg-color;
   outline: none;
-}
-
-.text-field__input--inline {
-  @include zero-width;
-}
-
-// иконка для input добавляется отдельным элементом, а это значит, что input теперь не один в строке
-// значит, нужно применить fix для строчных input
-.text-field__icon-wrapper .text-field__input {
-  @include zero-width;
 }
 
 .text-field__input:hover {
@@ -90,6 +76,7 @@ $input-border-width: 4px;
   display: block;
   width: 58px;
   background-color: #e6e6e6;
+  flex-shrink: 0;
 }
 
 .text-field__icon-wrapper--tel::before {
