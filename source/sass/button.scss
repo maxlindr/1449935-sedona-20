@@ -1,0 +1,21 @@
+@import "color";
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.button--general {
+  padding: 15px 32px 18px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $basic-blue;
+  color: white;
+}

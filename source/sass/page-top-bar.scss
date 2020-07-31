@@ -1,0 +1,25 @@
+.page-top-bar {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 17px 20px;
+  min-height: 56px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.page-top-bar__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-top-bar__open-btn {
+  width: 23px;
+  height: 22px;
+  content: "";
+  background-image: url("../img/icon-menu.svg");
+  background-color: transparent;
+  border: none;
+}

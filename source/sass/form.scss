@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 48px;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px 20px 25px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.form__fieldset-title {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form__text-field + .form__text-field {
+  margin-top: 20px;
+}
+
+.form__radio + .form__radio {
+  margin-top: 13px;
+}
+
+.form__checkbox + .form__checkbox {
+  margin-top: 24px;
+}
+
+.form__text-area {
+  min-height: 160px;
+}
+
+.form__submit {
+  margin: (51px - 25px) 20px 0;
+}

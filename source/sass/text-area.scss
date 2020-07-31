@@ -1,0 +1,33 @@
+$border-width: 4px;
+
+.text-area {
+  padding-top: (13px - $border-width);
+  padding-left: (22px - $border-width);
+  padding-right: (22px - $border-width);
+  padding-bottom: (29px - $border-width);
+
+  box-sizing: border-box;
+  resize: none;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+
+  outline: none;
+  border: $border-width solid $input-bg-color;
+  background-color: $input-bg-color;
+}
+
+.text-area::placeholder {
+  opacity: 1;
+}
+
+.text-area:hover {
+  border-color: $input-hover-bg-color;
+  background-color: $input-hover-bg-color;
+}
+
+.text-area:focus {
+  border-color: $input-hover-bg-color;
+  background-color: transparent;
+}

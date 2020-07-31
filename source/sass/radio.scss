@@ -1,0 +1,44 @@
+@import "color";
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio__label {
+  margin-left: 22px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.radio__decorator {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 17px solid $input-bg-color;
+  background-color: $input-bg-color;
+}
+
+.radio__input:hover ~ .radio__decorator,
+.radio__input:focus ~ .radio__decorator {
+  border-color: $input-hover-bg-color;
+  background-color: $input-hover-bg-color;
+}
+
+.radio__input:active ~ .radio__decorator {
+  border-color: $binary-input-active-color;
+  background-color: $binary-input-active-color;
+}
+
+.radio__input:checked ~ .radio__decorator {
+  background-color: $dark-gray;
+}
+
+.radio__input:checked:active ~ .radio__decorator {
+  border-color: $binary-input-active-color;
+  background-color: rgb(164, 164, 164);
+}

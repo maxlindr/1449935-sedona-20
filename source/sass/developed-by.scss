@@ -1,0 +1,32 @@
+@import "color";
+
+.developed-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.developed-by__developed {
+  margin-top: 0;
+  margin-right: 13px;
+}
+
+.developed-by__link {
+  line-height: 0;
+}
+
+.developed-by__logo {
+  fill: black;
+  width: 27px;
+  height: 34px;
+}
+
+.developed-by__link:hover .developed-by__logo,
+.developed-by__link:focus .developed-by__logo {
+  fill: $basic-blue;
+}
+
+.developed-by__link:active .developed-by__logo {
+  fill: black;
+  opacity: 0.3;
+}

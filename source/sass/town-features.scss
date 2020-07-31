@@ -1,0 +1,66 @@
+@import "color";
+
+@mixin icon {
+  position: absolute;
+  display: block;
+  content: "";
+  background-size: contain;
+}
+
+.town-features {
+  padding: 35px 40px 35px 0;
+}
+
+.town-features__list {
+  @include list-reset;
+}
+
+.town-features__item {
+  position: relative;
+  margin-left: 69px;
+}
+
+.town-features__item + .town-features__item {
+  margin-top: 26px;
+}
+
+.town-feature__title {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.town-feature__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.town-features__item--housing::before {
+  @include icon;
+  left: -48px;
+  top: -9px;
+  width: 39px;
+  height: 37px;
+  background-image: url("../img/icon-house.svg");
+}
+
+.town-features__item--souvenirs::before {
+  @include icon;
+  left: -45px;
+  top: -11px;
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.town-features__item--food::before {
+  @include icon;
+  left: -52px;
+  top: -5px;
+  width: 40px;
+  height: 35px;
+  background-image: url("../img/icon-burger.svg");
+}

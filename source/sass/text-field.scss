@@ -1,0 +1,107 @@
+@import "color";
+
+$indent: 22px;
+$input-border-width: 4px;
+
+@mixin text-field-icon {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.text-field {
+  display: flex;
+  align-items: center;
+}
+
+.text-field--column {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.text-field__label {
+  font-size: 14px;
+  line-height: 26px;
+  color: $dark-gray;
+  margin-right: 13px;
+}
+
+.text-field__label--column {
+  display: block;
+  margin-left: $indent;
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
+.text-field__input {
+  box-sizing: border-box;
+  padding-top: 18px - $input-border-width;
+  padding-left: $indent - $input-border-width;
+  padding-right: $indent - $input-border-width;
+  padding-bottom: 14px - $input-border-width;
+  min-width: 0;
+  flex-grow: 1;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+
+  background-color: $input-bg-color;
+  border: $input-border-width solid $input-bg-color;
+  outline: none;
+}
+
+.text-field__input--inline {
+  width: 0; // магия, усмиряющая непомерный рост input в ширину, когда он находится в одной строке с другими элементами.
+}
+
+// иконка для input добавляется отдельным элементом, а это значит, что input теперь не один в строке
+// значит, нужно применить fix для строчных input
+.text-field__icon-wrapper .text-field__input {
+  @include text-field__input--inline;
+}
+
+.text-field__input:hover {
+  border-color: $input-hover-bg-color;
+  background-color: $input-hover-bg-color;
+}
+
+.text-field__input:focus {
+  border-color: $input-hover-bg-color;
+  background-color: transparent;
+}
+
+.text-field__input::placeholder {
+  opacity: 1;
+}
+
+.text-field__icon-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.text-field__icon-wrapper::after {
+  content: "";
+  display: block;
+  width: 58px;
+  background-color: #e6e6e6;
+}
+
+.text-field__icon-wrapper--tel::before {
+  @include text-field-icon;
+  width: 18px;
+  height: 18px;
+  right: 19px;
+  top: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='18px' viewBox='0 0 18 18' enable-background='new 0 0 18 18' xml:space='preserve'%3E%3Cg id='Page-1'%3E%3Cg id='Icons-Communication' transform='translate(-85.000000, -126.000000)'%3E%3Cg id='phone' transform='translate(85.000000, 126.000000)'%3E%3Cpath id='Shape' fill='%23010101' d='M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.text-field__icon-wrapper--email::before {
+  @include text-field-icon;
+  width: 16px;
+  height: 12px;
+  right: 21px;
+  top: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16px' height='16px' viewBox='0 0 16 16' enable-background='new 0 0 16 16' xml:space='preserve'%3E%3Cpath d='M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z'/%3E%3C/svg%3E%0A");
+}

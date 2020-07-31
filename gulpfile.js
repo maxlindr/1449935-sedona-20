@@ -33,6 +33,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: "Firefox Developer Edition",
   });
   done();
 }
