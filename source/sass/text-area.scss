@@ -9,6 +9,7 @@ $border-width: 4px;
   box-sizing: border-box;
   resize: none;
 
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -19,6 +20,7 @@ $border-width: 4px;
 }
 
 .text-area::placeholder {
+  color: black;
   opacity: 1;
 }
 

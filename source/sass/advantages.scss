@@ -48,6 +48,7 @@
 
 .advantages__title {
   margin: 0;
+  order: -1;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -57,7 +58,6 @@
 .advantages__number {
   position: relative;
   margin: 11px 0 16px;
-  order: 1;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -83,7 +83,6 @@
 
 .advantages__description {
   margin: 0;
-  order: 1;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
