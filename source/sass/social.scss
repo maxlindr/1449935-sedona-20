@@ -1,10 +1,9 @@
-@import "color";
-
 @mixin icon {
   position: absolute;
   display: block;
   content: "";
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .social {

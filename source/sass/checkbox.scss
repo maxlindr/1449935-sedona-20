@@ -1,8 +1,7 @@
-@import "color";
-
 .checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .checkbox__label {

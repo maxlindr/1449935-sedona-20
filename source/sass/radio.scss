@@ -1,8 +1,7 @@
-@import "color";
-
 .radio {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .radio__label {

@@ -1,5 +1,3 @@
-@import "color";
-
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -10,6 +8,7 @@
 
 .button--general {
   padding: 15px 32px 18px;
+  font-family: inherit;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
