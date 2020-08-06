@@ -1,5 +1,3 @@
-$padding: 17px;
-
 .page-intro {
   position: relative;
   text-align: center;
@@ -8,31 +6,69 @@ $padding: 17px;
   padding-bottom: 27px;
 }
 
-.page-intro--primary::after {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 37px;
-  bottom: -16px;
-  content: "";
-  background-image: url("../img/bg-triangle.svg");
-  background-repeat: no-repeat;
-}
-
 .page-intro__title {
-  padding-left: $padding;
-  padding-right: $padding;
   margin: 0 0 26px;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
-  color: black;
+  color: $black;
 }
 
 .page-intro__body {
-  padding-left: $padding;
-  padding-right: $padding;
-  font-size: 14px;
-  color: $dark-gray;
   margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: $dark-gray;
+}
+
+@media (max-width: $mobile-width) {
+  .page-intro--primary::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 37px;
+    bottom: -16px;
+    content: "";
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+  }
+
+  .page-intro--primary {
+    margin-left: 17px;
+    margin-right: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-intro--primary {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-intro--photo {
+    margin-left: 155px;
+    margin-right: 155px;
+  }
+
+  .page-intro__title {
+    font-size: 21px;
+  }
+
+  .page-intro__title--secondary {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-intro--primary {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-intro--photo {
+    margin-left: 370px;
+    margin-right: 370px;
+  }
 }

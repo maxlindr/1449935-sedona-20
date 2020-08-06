@@ -14,7 +14,7 @@
 }
 
 .developed-by__logo {
-  fill: black;
+  fill: $black;
   width: 27px;
   height: 34px;
 }
@@ -25,6 +25,6 @@
 }
 
 .developed-by__link:active .developed-by__logo {
-  fill: black;
+  fill: $black;
   opacity: 0.3;
 }

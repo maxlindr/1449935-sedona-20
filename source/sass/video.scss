@@ -18,7 +18,7 @@ $outer-controls-height: 66px;
   flex-direction: column;
   left: 20px;
   right: 20px;
-  background-color: rgba($color: black, $alpha: 0.6);
+  background-color: rgba($color: $black, $alpha: 0.6);
 }
 
 .video__outer-controls {
@@ -41,7 +41,7 @@ $outer-controls-height: 66px;
 .video__progressbar {
   height: 3px;
   flex-grow: 1;
-  background-color: white;
+  background-color: $white;
   opacity: 0.2;
   margin-left: 5px;
   margin-right: 5px;
@@ -53,7 +53,7 @@ $outer-controls-height: 66px;
   left: 36px;
   width: 9px;
   height: 9px;
-  background-color: white;
+  background-color: $white;
   border-radius: 50%;
 }
 

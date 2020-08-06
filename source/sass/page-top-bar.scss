@@ -23,3 +23,16 @@
   background-color: transparent;
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .page-top-bar {
+    position: static;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .page-top-bar__logo {
+    position: absolute;
+    z-index: 1;
+  }
+}
