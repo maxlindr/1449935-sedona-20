@@ -2,11 +2,14 @@
   display: block;
   position: absolute;
   width: 100%;
-  z-index: 2;
+}
+
+.nav-menu--hidden {
+  display: none;
 }
 
 .nav-menu--no-js {
-  position: relative;
+  position: static;
 }
 
 .nav-menu__list {
@@ -36,20 +39,6 @@
 .nav-menu__link[href]:active {
   color: rgba($color: white, $alpha: 0.3);
   background-color: $basic-blue-3;
-}
-
-.nav-menu__close-btn {
-  position: absolute;
-  right: 20px;
-  top: 17px;
-  width: 22px;
-  height: 22px;
-  content: "";
-  background-image: url("../img/icon-cross.svg");
-}
-
-.nav-menu--no-js .nav-menu__close-btn {
-  display: none;
 }
 
 @media (max-width: $mobile-width) {
@@ -134,10 +123,5 @@
     &:active.nav-menu__link--current {
       color: rgba($color: #766357, $alpha: 0.3);
     }
-  }
-
-
-  .nav-menu__close-btn {
-    display: none;
   }
 }
