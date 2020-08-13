@@ -1,5 +1,12 @@
 .nav-menu {
   display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-menu--no-js {
+  position: relative;
 }
 
 .nav-menu__list {
@@ -39,6 +46,10 @@
   height: 22px;
   content: "";
   background-image: url("../img/icon-cross.svg");
+}
+
+.nav-menu--no-js .nav-menu__close-btn {
+  display: none;
 }
 
 @media (max-width: $mobile-width) {
