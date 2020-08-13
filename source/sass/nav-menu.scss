@@ -111,7 +111,31 @@
 
     background-color: $white;
     color: $black;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $basic-blue;
+      background-color: $white;
+    }
+
+    &[href]:active {
+      color: rgba($color: $black, $alpha: 0.3);
+    }
+
+    &.nav-menu__link--current {
+      color: #766357;
+    }
+
+    &:hover.nav-menu__link--current,
+    &:focus.nav-menu__link--current {
+      color: #604E43;
+    }
+
+    &:active.nav-menu__link--current {
+      color: rgba($color: #766357, $alpha: 0.3);
+    }
   }
+
 
   .nav-menu__close-btn {
     display: none;
