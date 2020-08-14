@@ -41,6 +41,10 @@
 
 .advantages__item:first-child .advantages__header {
   padding-top: 55px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: calc(34px + #{$page-intro-triangle-offset});
+  }
 }
 
 .advantages__title {

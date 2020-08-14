@@ -15,27 +15,32 @@
 }
 
 .page-intro__body {
+  position: relative; // необходимо для z-index
   margin: 0;
   font-size: 14px;
   line-height: 26px;
   color: $dark-gray;
+  z-index: 1; // нижний треугольник секции высокий и иногда может перекрывать этот элемент, поэтому поднимаем его вверх
 }
 
 @media (max-width: $mobile-width) {
   .page-intro--primary::after {
     position: absolute;
+    left: 0;
+    bottom: -$page-intro-triangle-offset; // выступающей частью нужна только треугольная часть этой фигуры, поэтому смещаем прямоугольную часть максимально вверх
     display: block;
     width: 100%;
-    height: 37px;
-    bottom: -16px;
+    padding-bottom: 11.6%; // хак, задающий высоту контейнера пропорционально ширине
     content: "";
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .page-intro--primary {
-    margin-left: 17px;
-    margin-right: 18px;
+    padding-left: 17px;
+    padding-right: 18px;
   }
 }
 
