@@ -21,14 +21,16 @@
 .nav-menu__link {
   display: block;
   margin-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
   font-size: 18px;
   font-weight: bold;
   line-height: 40px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  text-align: center;
-  color: $white;
   text-decoration: none;
+  text-align: center;
+
+  color: $white;
 }
 
 .nav-menu__link[href]:hover,
@@ -70,30 +72,27 @@
 @media (min-width: $tablet-width) {
   .nav-menu__list {
     position: relative;
-    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
-  }
-
-  // разделительный пустой элемент под логотипом
-  // не позволяет занимать это место другими элементами списка при добавлении новых элементов
-  .nav-menu__list::before {
-    content: "";
-    width: 20%;
+    background-color: transparent;
   }
 
   .nav-menu__item {
     width: 20%;
+    padding: 16px 10px 14px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
-  .nav-menu__item:nth-child(1),
   .nav-menu__item:nth-child(2) {
-    order: -1;
+    // здесь правое поле в качестве разделителя эелементов меню под логотипом,
+    // не позволяет занимать это место другими элементами.
+    margin-right: 20%;
   }
 
   .nav-menu__link {
-    padding-top: 16px;
-    padding-bottom: 14px;
+    display: inline-block;
+    padding: 0;
 
     font-size: 14px;
     line-height: 26px;
