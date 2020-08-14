@@ -6,21 +6,30 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 
 .gallery__list {
   @include list-reset;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .gallery__item {
   padding: 22px 20px 21px;
 }
 
-@media (max-width: $mobile-width) {
-  .gallery__item:last-child {
-    border-bottom: $item-border;
-  }
 
-  .gallery__item {
-    border-top: $item-border;
-  }
-}
 
 .gallery__figure {
   margin: 0;
@@ -80,6 +89,16 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
   font-weight: bold;
 }
 
+@media (max-width: $mobile-width) {
+  .gallery__item {
+    border-top: $item-border;
+  }
+
+  .gallery__item:last-child {
+    border-bottom: $item-border;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .gallery__image-link {
     width: 100%;
@@ -105,25 +124,13 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
     margin: 0 20px 0 auto;
   }
 
-  .gallery__list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
   .gallery__item {
-    width: 50%;
     padding: 0;
   }
 
   .gallery__item .gallery__image-link {
     max-height: 267px;
     overflow: hidden;
-  }
-
-  .gallery__item:first-child {
-    width: 100%;
   }
 
   .gallery__item:first-child .gallery__image-link {
@@ -133,25 +140,24 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .gallery__item:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
   .gallery__item:nth-child(2n+1) .gallery__figcaption {
     background-color: #eaeaea;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .gallery__list {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .gallery__item {
     position: relative;
-    width: 33%;
   }
 
-  // поскольку 3 × 33% == 99%, дотягиваем последний элемент в колонке до 100%
-  .gallery__item:not(:first-child):nth-child(3n+1) {
-    width: 34%;
+  .gallery__item:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 
   .gallery__figcaption {
