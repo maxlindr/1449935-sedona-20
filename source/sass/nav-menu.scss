@@ -1,5 +1,15 @@
 .nav-menu {
   display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-menu--hidden {
+  display: none;
+}
+
+.nav-menu--no-js {
+  position: static;
 }
 
 .nav-menu__list {
@@ -8,38 +18,19 @@
   background-color: $basic-blue;
 }
 
-.nav-menu__list::after {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 7px;
-  content: "";
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-}
-
 .nav-menu__link {
   display: block;
   margin-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
   font-size: 18px;
   font-weight: bold;
   line-height: 40px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  text-align: center;
-  color: white;
   text-decoration: none;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
-  background-color: $basic-blue;
-}
+  text-align: center;
 
-.nav-menu__item:not(:first-child) .nav-menu__link {
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.nav-menu__item:last-child .nav-menu__link {
-  margin-bottom: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: $white;
 }
 
 .nav-menu__link[href]:hover,
@@ -52,14 +43,84 @@
   background-color: $basic-blue-3;
 }
 
-.nav-menu__close-btn {
-  position: absolute;
-  right: 20px;
-  top: 17px;
-  width: 22px;
-  height: 22px;
-  content: "";
-  background-image: url("../img/icon-cross.svg");
-  background-color: transparent;
-  border: none;
+@media (max-width: $mobile-width) {
+  .nav-menu__list::after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 7px;
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  .nav-menu__item:not(:first-child) .nav-menu__link {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-menu__item:last-child .nav-menu__link {
+    margin-bottom: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-menu__link {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+    background-color: $basic-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav-menu__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+
+  .nav-menu__item {
+    width: 20%;
+    padding: 16px 10px 14px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .nav-menu__item:nth-child(2) {
+    // здесь правое поле в качестве разделителя эелементов меню под логотипом,
+    // не позволяет занимать это место другими элементами.
+    margin-right: 20%;
+  }
+
+  .nav-menu__link {
+    display: inline-block;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 26px;
+
+    background-color: $white;
+    color: $black;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $basic-blue;
+      background-color: $white;
+    }
+
+    &[href]:active {
+      color: rgba($color: $black, $alpha: 0.3);
+    }
+
+    &.nav-menu__link--current {
+      color: #766357;
+    }
+
+    &:hover.nav-menu__link--current,
+    &:focus.nav-menu__link--current {
+      color: #604e43;
+    }
+
+    &:active.nav-menu__link--current {
+      color: rgba($color: #766357, $alpha: 0.3);
+    }
+  }
 }

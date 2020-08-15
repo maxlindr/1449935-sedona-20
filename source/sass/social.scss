@@ -9,6 +9,11 @@
 .social {
   margin-top: 34px;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
 }
 
 .social__list {

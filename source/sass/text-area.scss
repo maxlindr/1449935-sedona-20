@@ -20,7 +20,7 @@ $border-width: 4px;
 }
 
 .text-area::placeholder {
-  color: black;
+  color: $black;
   opacity: 1;
 }
 
