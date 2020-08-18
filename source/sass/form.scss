@@ -2,6 +2,20 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .form__fieldset {
@@ -11,6 +25,12 @@
   padding: 20px 20px 25px;
   border: none;
   border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
 }
 
 .form__fieldset-title {
@@ -28,6 +48,15 @@
 
 .form__radio + .form__radio {
   margin-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 22px;
+  }
+}
+
+.form__checkbox-list,
+.form__radio-list {
+  @include list-reset;
 }
 
 .form__checkbox + .form__checkbox {
@@ -38,6 +67,198 @@
   min-height: 160px;
 }
 
-.form__submit {
+.form__footer {
   margin: (51px - 25px) 20px 0;
+}
+
+.form__submit {
+  width: 100%;
+}
+
+.form__footnote {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form__fieldset {
+    width: 100%;
+  }
+
+  .form__fieldset--introduce,
+  .form__fieldset--impression {
+    width: 50%;
+    margin-top: 59px;
+  }
+
+  .form__fieldset--introduce {
+    padding-left: 58px;
+  }
+
+  .form__fieldset--impression {
+    order: -1;
+    padding-right: 51px;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .form__fieldset--contacts,
+  .form__fieldset--visited-attractions,
+  .form__fieldset--emotions {
+    .form__fieldset-title {
+      display: flex;
+      position: relative;
+      align-items: center;
+    }
+
+    .form__fieldset-title-text {
+      max-width: 308px;
+    }
+
+    .form__fieldset-title::before,
+    .form__fieldset-title::after {
+      position: relative;
+      display: inline-block;
+      content: "";
+      flex-grow: 1;
+      border-top: 1px solid #dbdbdb;
+    }
+  }
+
+  .form__fieldset--contacts {
+    margin-top: 73px;
+
+    .form__fieldset-title-text {
+      margin-left: 63px;
+      margin-right: 63px;
+    }
+  }
+
+  .form__fieldset--visited-attractions {
+    margin-top: 52px;
+
+    .form__fieldset-title-text {
+      margin-left: 63px;
+      margin-right: 63px;
+    }
+  }
+
+  .form__fieldset--emotions {
+    margin-top: 71px;
+
+    .form__fieldset-title-text {
+      margin-left: 75px;
+      margin-right: 75px;
+    }
+  }
+
+  .form__fieldset--introduce .form__fieldset-title,
+  .form__fieldset--impression .form__fieldset-title {
+    text-align: left;
+  }
+
+  .form__fieldset-title {
+    font-size: 21px;
+    margin-bottom: 55px;
+  }
+
+  .form__checkbox-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__checkbox {
+    width: 50%;
+    padding-left: 95px;
+    box-sizing: border-box;
+  }
+
+  .form__checkbox:nth-child(2n) {
+    padding-left: 30px;
+  }
+
+  .form__checkbox + .form__checkbox {
+    margin-top: 0;
+  }
+
+  .form__checkbox:nth-child(n+3) {
+    margin-top: 32px;
+  }
+
+  .form__submit {
+    min-width: 324px;
+    width: auto;
+  }
+
+  .form__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 58px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form__footnote {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset--contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .form__text-field {
+      width: 50%;
+    }
+
+    .form__fieldset-title {
+      width: 100%;
+    }
+
+    .form__text-field + .form__text-field {
+      margin-top: 0;
+    }
+  }
+
+  .form__fieldset--introduce {
+    padding-left: 79px;
+  }
+
+  .form__fieldset--impression {
+    padding-right: 79px;
+  }
+
+  .form__fieldset--contacts .form__text-field:nth-of-type(1) {
+    width: calc(50% - 79px);
+    margin-right: 79px;
+  }
+
+  .form__checkbox-list {
+    justify-content: space-between;
+    margin-right: -30px;
+  }
+
+  .form__checkbox:nth-child(n+3) {
+    margin-top: 0;
+  }
+
+  .form__checkbox {
+    width: auto;
+    padding: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form__checkbox:nth-child(2n) {
+    padding-left: 0;
+  }
+
+  .form__submit {
+    min-width: 480px;
+  }
 }

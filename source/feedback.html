@@ -32,12 +32,12 @@
         <h2 class="visually-hidden">Sedona</h2>
         <img class="page-title__welcome page-title__welcome--secondary" src="img/text-sedona.svg" alt="">
       </section>
-      <section class="page-intro">
-        <h1 class="page-intro__title">Оставьте свой отзыв</h1>
+      <section class="page-intro page-intro--feedback">
+        <h1 class="page-intro__title page-intro__title--secondary">Оставьте свой отзыв</h1>
         <p class="page-intro__body">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form class="form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--introduce">
           <h2 class="form__fieldset-title">Представьтесь:</h2>
           <div class="form__text-field text-field">
             <label class="text-field__label" for="name">Имя*:</label>
@@ -52,22 +52,25 @@
             <input class="text-field__input" type="text" name="middleName" id="middleName" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <h2 class="form__fieldset-title">Контактная информация:</h2>
-          <label class="form__text-field text-field text-field--column">
-            <div class="text-field__label text-field__label--column">Контактный телефон*:</div>
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <h2 class="form__fieldset-title">
+            <span class="form__fieldset-title-text">Контактная информация:</span>
+          </h2>
+          <label class="form__text-field text-field">
+            <div class="text-field__label text-field__label--long">Контактный телефон*:</div>
+            <div class="text-field__label text-field__label--short">Телефон*:</div>
             <div class="text-field__icon-wrapper text-field__icon-wrapper--tel">
               <input class="text-field__input" type="tel" name="tel" placeholder="Введите телефон" required>
             </div>
           </label>
-          <label class="form__text-field text-field text-field--column">
-            <div class="text-field__label text-field__label--column">Электронная почта*:</div>
+          <label class="form__text-field text-field">
+            <div class="text-field__label">Электронная почта*:</div>
             <div class="text-field__icon-wrapper text-field__icon-wrapper--email">
               <input class="text-field__input" type="email" name="email" placeholder="Введите e-mail" required>
             </div>
           </label>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--impression">
           <h2 class="form__fieldset-title">Ваше общее впечатление:</h2>
           <ul class="form__radio-list radio-list">
             <li class="form__radio ">
@@ -93,9 +96,11 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <h2 class="form__fieldset-title">Посещенные достопримечательности:</h2>
-          <ul class="form__checkbox-list checkbox-list">
+        <fieldset class="form__fieldset form__fieldset--visited-attractions">
+          <h2 class="form__fieldset-title">
+            <span class="form__fieldset-title-text">Посещенные достопримечательности:</span>
+          </h2>
+          <ul class="form__checkbox-list">
             <li class="form__checkbox">
               <label class="checkbox">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="devilbridge" checked>
@@ -126,11 +131,16 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <h2 class="form__fieldset-title">Опишите свои эмоции:</h2>
+        <fieldset class="form__fieldset form__fieldset--emotions">
+          <h2 class="form__fieldset-title">
+            <span class="form__fieldset-title-text">Опишите свои эмоции:</span>
+          </h2>
           <textarea class="form__text-area text-area" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button class="form__submit button button--general" type="submit">Отправить отзыв</button>
+        <footer class="form__footer">
+          <button class="form__submit button button--general" type="submit">Отправить отзыв</button>
+          <span class="form__footnote">* — обязательные поля</span>
+        </footer>
       </form>
     </main>
 
