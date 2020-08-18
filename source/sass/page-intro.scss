@@ -45,6 +45,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page-intro--feedback {
+    margin-left: 167px;
+    margin-right: 167px;
+  }
+
+  .page-intro__title--secondary {
+    font-size: 30px;
+  }
+
   .page-intro--primary {
     width: 520px;
     margin-left: auto;
@@ -54,14 +63,6 @@
   .page-intro--photo {
     margin-left: 155px;
     margin-right: 155px;
-  }
-
-  .page-intro__title {
-    font-size: 21px;
-  }
-
-  .page-intro__title--secondary {
-    font-size: 30px;
   }
 }
 

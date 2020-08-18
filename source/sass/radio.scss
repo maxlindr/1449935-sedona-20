@@ -41,3 +41,9 @@
   border-color: $binary-input-active-color;
   background-color: rgb(164, 164, 164);
 }
+
+@media (min-width: $tablet-width) {
+  .radio__label {
+    margin-left: 19px;
+  }
+}
