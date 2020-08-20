@@ -7,7 +7,7 @@
 }
 
 .town-features {
-  padding: 35px 40px 35px 0;
+  padding: 35px 40px 36px 0;
   flex-grow: 1;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .town-feature__title {
-  margin: 0 0 16px 0;
+  margin: 0 0 15px 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -61,10 +61,21 @@
   background-image: url("../img/icon-burger.svg");
 }
 
+// Переносы строки
 
-@media (max-width: $mobile-width) {
+.town-feature__food-description-br {
+  display: none;
+}
+
+.town-feature__souvenir-description-br {
+  display: none;
+}
+
+// Медиазапросы
+
+@media (max-width: $tablet-width - 1) {
   .town-features__item + .town-features__item {
-    margin-top: 26px;
+    margin-top: 27px;
   }
 }
 
@@ -79,53 +90,89 @@
   }
 
   .town-features__item {
+    box-sizing: border-box;
+    flex-shrink: 0;
     margin: 0;
-    width: 33%;
-    margin-top: 158px;
-    margin-bottom: 60px;
+    width: 33.33%;
+    margin-top: 157px;
+    margin-bottom: 61px;
   }
 
   .town-feature__title {
     font-size: 21px;
-    margin-bottom: 21px;
-  }
-
-  .town-features__item--housing::before {
-    @include icon;
-    left: 50%;
-    top: -95px;
-    width: 75px;
-    height: 72px;
-    transform: translateX(-50%);
+    margin-bottom: 23px;
   }
 
   .town-features__item--housing {
     padding-left: 36px;
     padding-right: 36px;
+
+    &::before {
+      @include icon;
+      left: 50%;
+      top: -97px;
+      width: 75px;
+      height: 72px;
+      transform: translateX(-50%);
+    }
   }
 
   .town-features__item--souvenirs {
     order: 1;
     padding-left: 32px;
     padding-right: 31px;
-    margin-top: 169px;
+    margin-top: 158px;
+
+    &::before {
+      @include icon;
+      left: 50%;
+      top: -100px;
+      width: 64px;
+      height: 75px;
+      transform: translateX(-50%);
+    }
   }
 
-  .town-features__item--food::before {
-    @include icon;
-    left: 50%;
-    top: -87px;
-    width: 76px;
-    height: 68px;
-    transform: translateX(-50%);
+  .town-features__item--food {
+    padding-left: 38px;
+    padding-right: 38px;
+
+    &::before {
+      @include icon;
+      left: 50%;
+      top: -94px;
+      width: 76px;
+      height: 68px;
+      transform: translateX(-50%);
+    }
   }
 
-  .town-features__item--souvenirs::before {
-    @include icon;
-    left: 50%;
-    top: -112px;
-    width: 64px;
-    height: 75px;
-    transform: translateX(-50%);
+  .town-feature__food-description-br {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .town-features__item {
+    margin-bottom: 81px;
+  }
+
+  .town-features__item--housing {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  .town-features__item--food {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  .town-features__item--souvenirs {
+    padding-left: 78px;
+    padding-right: 78px;
+  }
+
+  .town-feature__souvenir-description-br {
+    display: inline;
   }
 }

@@ -1,5 +1,5 @@
 .video-presentation {
-  padding-top: 32px;
+  padding-top: 31px;
   padding-bottom: 49px;
   text-align: center;
 }
@@ -19,5 +19,48 @@
 }
 
 .video-presentation__video {
-  margin-top: 33px;
+  margin-top: 36px;
+}
+
+@media (min-width: $tablet-width) {
+  .video-presentation {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 57px;
+    padding-bottom: 40px;
+  }
+
+  .video-presentation__title,
+  .video-presentation__body {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .video-presentation__title {
+    font-size: 30px;
+    margin-bottom: 33px;
+  }
+
+  .video-presentation__video {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video-presentation {
+    padding-left: 199px;
+    padding-right: 201px;
+    padding-top: 61px;
+    padding-bottom: 85px;
+  }
+
+  .video-presentation__title,
+  .video-presentation__body {
+    margin-left: 175px;
+    margin-right: 175px;
+  }
+
+  .video-presentation__video {
+    margin-top: 78px;
+  }
 }

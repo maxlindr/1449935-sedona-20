@@ -26,7 +26,12 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 }
 
 .gallery__item {
-  padding: 22px 20px 21px;
+  padding: 22px 20px 16px;
+  border-top: $item-border;
+
+  &:last-child {
+    border-bottom: $item-border;
+  }
 }
 
 .gallery__figure {
@@ -43,7 +48,7 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 }
 
 .gallery__figcaption-block {
-  margin-top: 11px;
+  margin-top: 9px;
 }
 
 .gallery__title {
@@ -63,12 +68,14 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 
 .gallery__like-block {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
   align-items: center;
 }
 
 .gallery__like-button {
+  position: relative;
   margin-right: 14px;
+  top: -3px;
 }
 
 .gallery__like-button::before {
@@ -87,22 +94,20 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
   font-weight: bold;
 }
 
-@media (max-width: $mobile-width) {
-  .gallery__item {
-    border-top: $item-border;
-  }
-
-  .gallery__item:last-child {
-    border-bottom: $item-border;
-  }
-}
-
 @media (min-width: $tablet-width) {
+  .gallery__item {
+    padding: 0;
+    border: none;
+  }
+
   .gallery__image-link {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
+    max-height: 267px;
+
     overflow: hidden;
   }
 
@@ -115,20 +120,16 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
   }
 
   .gallery__figcaption-block {
-    margin: 18px 0 15px 20px;
+    margin: 14px 0 18px 20px;
   }
 
   .gallery__like-block {
     margin: 0 20px 0 auto;
   }
 
-  .gallery__item {
-    padding: 0;
-  }
-
-  .gallery__item .gallery__image-link {
-    max-height: 267px;
-    overflow: hidden;
+  .gallery__like-button {
+    top: 0;
+    margin-right: 9px;
   }
 
   .gallery__item:first-child .gallery__image-link {
@@ -151,11 +152,11 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 @media (min-width: $desktop-width) {
   .gallery__item {
     position: relative;
-  }
 
-  .gallery__item:first-child {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
   }
 
   .gallery__figcaption {

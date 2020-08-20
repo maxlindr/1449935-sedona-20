@@ -9,6 +9,7 @@ $outer-controls-height: 66px;
 
 .video__video {
   width: 100%;
+  height: 201px;
 }
 
 .video__controls {
@@ -32,10 +33,10 @@ $outer-controls-height: 66px;
 .video__time-controls {
   position: relative;
   flex-grow: 1;
-  margin-top: 18px;
-  margin-bottom: 18px;
-  padding-left: 17px;
-  padding-right: 17px;
+  margin-top: 22px;
+  margin-bottom: 20px;
+  margin-left: 17px;
+  margin-right: 17px;
 }
 
 .video__progressbar {
@@ -50,7 +51,7 @@ $outer-controls-height: 66px;
 .video__pin {
   position: absolute;
   top: -3px;
-  left: 36px;
+  left: 41px;
   width: 9px;
   height: 9px;
   background-color: $white;
@@ -67,10 +68,64 @@ $outer-controls-height: 66px;
   margin-right: auto;
 }
 
-.video__control--cc {
-  //
-}
-
 .video__control--fullscreen {
   margin-left: 31px;
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    padding-bottom: 0;
+  }
+
+  .video__video {
+    height: 500px;
+  }
+
+  .video__controls {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+  .video__time-controls {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 88px;
+    margin-right: 161px;
+  }
+
+  .video__pin {
+    left: 118px;
+  }
+
+  .video__outer-controls {
+    height: auto;
+  }
+
+  .video__control {
+    fill: white;
+    position: absolute;
+  }
+
+  .video__control--replay {
+    top: 35px;
+    left: 35px;
+  }
+
+  .video__control--cc {
+    top: 36px;
+    right: 92px;
+  }
+
+  .video__control--fullscreen {
+    top: 36px;
+    right: 41px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
