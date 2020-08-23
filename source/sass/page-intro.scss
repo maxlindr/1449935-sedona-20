@@ -1,17 +1,36 @@
 .page-intro {
   position: relative;
-  text-align: center;
-  line-height: 26px;
   padding-top: 32px;
-  padding-bottom: 27px;
+  padding-bottom: 34px;
+  line-height: 26px;
+  text-align: center;
 }
 
 .page-intro__title {
-  margin: 0 0 26px;
+  margin: 0 0 30px;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
   color: $black;
+}
+
+.page-intro--feedback {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 36px;
+  padding-bottom: 19px;
+  width: 306px;
+}
+
+.page-intro--photo {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 31px;
+  width: 289px;
+}
+
+.page-intro--photo .page-intro__title--secondary {
+  margin-bottom: 28px;
 }
 
 .page-intro__body {
@@ -23,7 +42,26 @@
   z-index: 1; // нижний треугольник секции высокий и иногда может перекрывать этот элемент, поэтому поднимаем его вверх
 }
 
-@media (max-width: $mobile-width) {
+.page-intro__body--secondary {
+  line-height: 24px;
+}
+
+.page-intro--feedback .page-intro__body {
+  line-height: 23px;
+}
+
+.page-intro--primary {
+  width: 100%;
+}
+
+@media (max-width: $tablet-width - 1) {
+  .page-intro--primary .page-intro__title,
+  .page-intro--primary .page-intro__body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+
   .page-intro--primary::after {
     position: absolute;
     left: 0;
@@ -37,44 +75,57 @@
     background-size: cover;
     background-position: center;
   }
-
-  .page-intro--primary {
-    padding-left: 17px;
-    padding-right: 18px;
-  }
 }
 
 @media (min-width: $tablet-width) {
-  .page-intro--feedback {
-    margin-left: 167px;
-    margin-right: 167px;
+  .page-intro--primary {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 43px;
+    padding-bottom: 55px;
+    width: 500px;
+  }
+
+  .page-intro--primary .page-intro__title {
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .page-intro__title--secondary {
     font-size: 30px;
+    margin-bottom: 34px;
   }
 
-  .page-intro--primary {
-    width: 520px;
-    margin-left: auto;
-    margin-right: auto;
+  .page-intro--photo .page-intro__title--secondary {
+    margin-bottom: 32px;
   }
 
   .page-intro--photo {
-    margin-left: 155px;
-    margin-right: 155px;
+    padding-top: 63px;
+    padding-bottom: 79px;
+    width: 440px;
+  }
+
+  .page-intro--feedback {
+    padding-top: 69px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 444px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-intro--primary {
-    width: 520px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 54px;
+    padding-bottom: 44px;
   }
 
   .page-intro--photo {
-    margin-left: 370px;
-    margin-right: 370px;
+    padding-top: 100px;
+    padding-bottom: 81px;
+  }
+
+  .page-intro--feedback {
+    padding-top: 112px;
   }
 }

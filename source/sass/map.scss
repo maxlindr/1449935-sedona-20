@@ -3,6 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+  height: 350px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .map::before {

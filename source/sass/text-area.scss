@@ -1,8 +1,8 @@
 $border-width: 4px;
 
 .text-area {
-  padding-top: (13px - $border-width);
-  padding-left: (22px - $border-width);
+  padding-top: (12px - $border-width);
+  padding-left: (21px - $border-width);
   padding-right: (22px - $border-width);
   padding-bottom: (29px - $border-width);
 
@@ -17,6 +17,10 @@ $border-width: 4px;
   outline: none;
   border: $border-width solid $input-bg-color;
   background-color: $input-bg-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: (17px - $border-width);
+  }
 }
 
 .text-area::placeholder {
