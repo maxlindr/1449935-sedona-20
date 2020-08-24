@@ -43,19 +43,19 @@
         <fieldset class="form__fieldset form__fieldset--introduce">
           <h2 class="form__fieldset-title">Представьтесь:</h2>
           <div class="form__text-field text-field">
-            <label class="text-field__label" for="name">Имя*:</label>
+            <label class="text-field__label text-field__label--name" for="name">Имя*:</label>
             <input class="text-field__input" type="text" name="name" id="name" placeholder="Петр" required>
           </div>
           <div class="form__text-field text-field">
-            <label class="text-field__label" for="surname">Фамилия*:</label>
+            <label class="text-field__label text-field__label--surname" for="surname">Фамилия*:</label>
             <input class="text-field__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
           </div>
           <div class="form__text-field text-field">
-            <label class="text-field__label" for="middleName">Отчество:</label>
+            <label class="text-field__label text-field__label--middleName" for="middleName">Отчество:</label>
             <input class="text-field__input" type="text" name="middleName" id="middleName" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--contacts">
+        <div class="form__fieldset form__fieldset--contacts">
           <h2 class="form__fieldset-title">
             <span class="form__fieldset-title-text">Контактная информация:</span>
           </h2>
@@ -67,12 +67,12 @@
             </div>
           </label>
           <label class="form__text-field text-field">
-            <div class="text-field__label">Электронная почта*:</div>
+            <div class="text-field__label text-field__label--email">Электронная почта*:</div>
             <div class="text-field__icon-wrapper text-field__icon-wrapper--email">
               <input class="text-field__input" type="email" name="email" placeholder="Введите e-mail" required>
             </div>
           </label>
-        </fieldset>
+        </div>
         <fieldset class="form__fieldset form__fieldset--impression">
           <h2 class="form__fieldset-title">Ваше общее впечатление:</h2>
           <ul class="form__radio-list radio-list">
@@ -141,7 +141,7 @@
           <textarea class="form__text-area text-area" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <footer class="form__footer">
-          <button class="form__submit button button--general" type="submit">Отправить отзыв</button>
+          <button class="form__submit button button--general button--form" type="submit">Отправить отзыв</button>
           <span class="form__footnote">* — обязательные поля</span>
         </footer>
       </form>

@@ -73,7 +73,7 @@
 
 // Медиазапросы
 
-@media (max-width: $tablet-width - 1) {
+@media (max-width: $mobile-width) {
   .town-features__item + .town-features__item {
     margin-top: 27px;
   }

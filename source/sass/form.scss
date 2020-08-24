@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     padding-left: 120px;
     padding-right: 120px;
+    padding-bottom: 66px;
   }
 }
 
@@ -126,7 +127,7 @@
   .form__fieldset--introduce,
   .form__fieldset--impression {
     width: 50%;
-    margin-top: 59px;
+    margin-top: 61px;
   }
 
   .form__fieldset--introduce {
@@ -139,12 +140,17 @@
     border-right: 1px solid #e5e5e5;
   }
 
+  .form__fieldset--introduce .form__fieldset-title,
   .form__fieldset--impression .form__fieldset-title {
-    margin-bottom: 59px;
+    text-align: left;
+  }
+
+  .form__fieldset--impression .form__fieldset-title {
+    margin-bottom: 57px;
   }
 
   .form__fieldset--introduce .form__fieldset-title {
-    margin-bottom: 57px;
+    margin-bottom: 55px;
   }
 
   .form__fieldset--contacts,
@@ -223,11 +229,6 @@
     }
   }
 
-  .form__fieldset--introduce .form__fieldset-title,
-  .form__fieldset--impression .form__fieldset-title {
-    text-align: left;
-  }
-
   .form__fieldset-title {
     font-size: 21px;
     margin-bottom: 55px;
@@ -267,7 +268,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 57px;
+    margin-top: 58px;
     margin-left: 0;
     margin-right: 0;
   }
@@ -308,7 +309,7 @@
   }
 
   .form__fieldset--impression {
-    padding-right: 79px;
+    padding-right: 52px;
     padding-left: 4px;
   }
 
@@ -351,5 +352,17 @@
 
   .form__submit {
     min-width: 480px;
+  }
+}
+
+// pixel perfect
+
+@media (min-width: $desktop-width) {
+  .form__checkbox:nth-child(4) {
+    margin-right: 34px;
+  }
+
+  .form__fieldset--impression .form__fieldset-title {
+    text-align: center;
   }
 }
