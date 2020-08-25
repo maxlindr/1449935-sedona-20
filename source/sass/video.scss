@@ -13,10 +13,6 @@ $outer-controls-height: 66px;
   background-color: gray;
 }
 
-.video__video::-webkit-media-controls {
-  display: none;
-}
-
 .video__controls {
   position: absolute;
   bottom: 0;
