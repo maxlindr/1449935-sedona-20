@@ -21,7 +21,11 @@
           </ul>
         </nav>
         <div class="page-top-bar">
-          <img class="page-top-bar__logo" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102" height="84">
+          <picture class="page-top-bar__logo">
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
+          </picture>
         </div>
         <button class="button page-header__toggle-btn page-header__toggle-btn--open page-header__toggle-btn--no-js" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
@@ -48,7 +52,11 @@
                 <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </header>
               <div class="advantages__image-container">
-                <img class="advantages__image" src="img/main-city-mobile@1x.jpg" alt="">
+                <picture class="advantages__image">
+                  <source media="(min-width: 1200px) " srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px) " srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                  <img srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x" alt="">
+                </picture>
               </div>
               <section class="town-features">
                 <h4 class="visually-hidden">Особенности города</h4>
@@ -75,7 +83,11 @@
                 <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </header>
               <div class="advantages__image-container">
-                <img class="advantages__image" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
+                <picture class="advantages__image">
+                  <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                  <img srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                </picture>
               </div>
             </li>
             <li class="advantages__item advantages__item--secondary advantages__item-area">
@@ -103,7 +115,11 @@
         </section>
         <section class="map">
           <h2 class="visually-hidden">Карта проезда</h2>
-          <img class="map__static-map" src="img/bg-map-mobile@1x.jpg" alt="Карта проезда">
+          <picture class="map__static-map">
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x" alt="Карта проезда">
+          </picture>
         </section>
       </main>
 
