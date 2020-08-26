@@ -29,7 +29,7 @@
   padding: 26px 26px 26px;
   background-color: #eeeeee;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $mobile-width) {
     &:not(:last-child)::after {
       position: absolute;
       left: 20px;
@@ -56,7 +56,7 @@
 .advantages__item:first-child .advantages__header {
   padding-top: 55px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $mobile-width) {
     padding-top: calc(34px + #{$page-intro-triangle-offset});
   }
 }
@@ -182,7 +182,7 @@
 
   .advantages__item-tourists {
     .advantages__title {
-      width: 160px;
+      width: 150px;
     }
 
     .advantages__description {
@@ -194,6 +194,7 @@
     width: 33.33%;
     padding-left: 32px;
     padding-right: 32px;
+    flex-grow: 1;
   }
 
   .advantages__image-container {
@@ -238,7 +239,7 @@
   }
 
   .advantages__item:nth-child(2) .advantages__header {
-    padding: 51px 82px 55px 82px;
+    padding: 51px 85px 55px 85px;
   }
 
   .advantages__item--secondary {

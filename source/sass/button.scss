@@ -18,3 +18,16 @@
   background-color: $basic-blue;
   color: $white;
 }
+
+.button--form {
+  padding-top: 18px;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 34px;
+  }
+}

@@ -95,7 +95,8 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 }
 
 @media (min-width: $tablet-width) {
-  .gallery__item {
+  .gallery__item,
+  .gallery__item:last-child {
     padding: 0;
     border: none;
   }
@@ -175,5 +176,15 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
   .gallery__like-button::before {
     background-image: $white-like;
     opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__like-block--ppfix-1 {
+    margin-right: 29px;
+  }
+
+  .gallery__like-block--ppfix-2 {
+    margin-right: 36px;
   }
 }
