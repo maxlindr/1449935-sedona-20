@@ -38,8 +38,17 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
   margin: 0;
 }
 
+.gallery__picture {
+  width: 100%;
+}
+
 .gallery__image {
   width: 100%;
+
+  @media (max-width: $mobile-width) {
+    max-height: 280px;
+    object-fit: cover;
+  }
 }
 
 .gallery__image-link {
@@ -180,11 +189,11 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 }
 
 @media (min-width: $tablet-width) {
-  .gallery__like-block--ppfix-1 {
+  .gallery__item:nth-child(2n) .gallery__like-block {
     margin-right: 29px;
   }
 
-  .gallery__like-block--ppfix-2 {
+  .gallery__item:nth-child(3n) .gallery__like-block {
     margin-right: 36px;
   }
 }
