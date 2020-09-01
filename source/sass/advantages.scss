@@ -109,13 +109,34 @@
   color: $dark-gray;
 }
 
+.advantages__picture {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .advantages__image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 // Переносы строки
 .advantages__bridge-title-br {
   display: none;
+}
+
+@media (max-width: $mobile-width) {
+  .advantages__image {
+    max-height: 260px;
+  }
+
+  .advantages__item-bridge .advantages__image {
+    object-position: center top;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -198,12 +219,7 @@
   }
 
   .advantages__image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     width: 66.67%;
-    overflow: hidden;
   }
 
   .advantages__image {
@@ -223,6 +239,10 @@
   .advantages__number--secondary {
     margin-top: 12px;
     margin-bottom: 23px;
+  }
+
+  .advantages__item-bridge .advantages__image {
+    object-position: center top;
   }
 }
 
@@ -251,6 +271,6 @@
   }
 
   .advantages__item-bridge .advantages__image {
-    top: -15px;
+    object-position: center -15px;
   }
 }
