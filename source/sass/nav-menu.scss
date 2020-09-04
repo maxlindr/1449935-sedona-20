@@ -4,10 +4,6 @@
   width: 100%;
 }
 
-.nav-menu--hidden {
-  display: none;
-}
-
 .nav-menu--no-js {
   position: static;
 }
@@ -44,6 +40,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .nav-menu--hidden {
+    display: none;
+  }
+
   .nav-menu__list::after {
     position: absolute;
     bottom: 0;

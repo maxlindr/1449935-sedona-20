@@ -16,6 +16,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__toggle-btn--no-js {
