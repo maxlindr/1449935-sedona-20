@@ -63,6 +63,15 @@ $outer-controls-height: 66px;
 
 .video__control {
   fill: $control-btn-color;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .video__control--replay {
@@ -104,8 +113,18 @@ $outer-controls-height: 66px;
   }
 
   .video__control {
-    fill: white;
+    fill: $white;
     position: absolute;
+
+    &:hover,
+    &:focus {
+      fill: $white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .video__control--replay {

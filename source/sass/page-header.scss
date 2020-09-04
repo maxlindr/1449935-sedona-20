@@ -7,6 +7,15 @@
   position: absolute;
   content: "";
   background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__toggle-btn--no-js {
