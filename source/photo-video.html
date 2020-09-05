@@ -29,7 +29,7 @@
           </picture>
         </a>
       </div>
-      <button class="button page-header__toggle-btn page-header__toggle-btn--open page-header__toggle-btn--no-js" type="button">
+      <button class="button page-header__toggle-btn page-header__toggle-btn--open page-header__toggle-btn--no-js" type="button" hidden>
         <span class="visually-hidden">Открыть/закрыть меню</span>
       </button>
     </header>
@@ -141,7 +141,7 @@
         <p class="video-presentation__body">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <div class="video-presentation__video video">
           <video class="video__video" src="#" controls></video>
-          <div class="video__controls">
+          <div class="video__controls video__controls--no-js" hidden>
             <!-- Progress bar -->
             <div class="video__time-controls">
               <div class="video__progressbar"></div>
@@ -210,6 +210,6 @@
       </div>
     </footer>
   </div>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
