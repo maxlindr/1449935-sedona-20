@@ -11,6 +11,7 @@
   <body>
     <div class="page-wrapper">
       <header class="page-header">
+        <!-- Класс nav-menu--hidden скрывает меню -->
         <nav class="nav-menu nav-menu--no-js">
           <h2 class="visually-hidden">Навигационное меню</h2>
           <ul class="nav-menu__list">
@@ -27,6 +28,11 @@
             <img class="page-top-bar__logo" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
           </picture>
         </div>
+        <!--
+          За вид кнопки отвечают взаимоисключающие классы page-header__toggle-btn--close и page-header__toggle-btn--open.
+          При открытом меню кнопка должна иметь класс page-header__toggle-btn--close.
+          При закрытом меню кнопка должна иметь класс page-header__toggle-btn--open.
+        -->
         <button class="button page-header__toggle-btn page-header__toggle-btn--open page-header__toggle-btn--no-js" type="button" hidden>
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
