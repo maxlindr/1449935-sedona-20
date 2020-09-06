@@ -88,7 +88,7 @@ const serverBuild = (done) => {
     cors: true,
     notify: false,
     ui: false,
-    browser: 'Chrome',
+    browser: 'Google Chrome',
   });
   done();
 }
@@ -115,7 +115,12 @@ const build = gulp.parallel(
 exports.js = js;
 exports.server = server;
 exports.styles = styles;
-exports.build = gulp.series(clean, build, serverBuild);
+
+exports.build = gulp.series(
+  clean,
+  build,
+  // serverBuild
+);
 
 exports.default = gulp.series(
   styles, server, watcher
