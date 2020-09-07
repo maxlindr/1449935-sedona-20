@@ -42,6 +42,23 @@
   background-color: rgb(164, 164, 164);
 }
 
+.radio__input:disabled {
+  & ~ .radio__decorator {
+    background-color: $input-disabled;
+    border-color: $input-disabled;
+  }
+
+  & ~ .radio__label {
+    color: $input-label-disabled;
+  }
+}
+
+.radio__input:checked:disabled {
+  & ~ .radio__decorator {
+    background-color: #bbbbbb;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .radio__label {
     margin-left: 19px;
