@@ -12,7 +12,6 @@
       menuToggleBtn.classList.add('page-header__toggle-btn--open');
       menu.classList.add('nav-menu--hidden');
     } else {
-      console.log('open');
       menuToggleBtn.classList.remove('page-header__toggle-btn--open');
       menuToggleBtn.classList.add('page-header__toggle-btn--close');
       menu.classList.remove('nav-menu--hidden');

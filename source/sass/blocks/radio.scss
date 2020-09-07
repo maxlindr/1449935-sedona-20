@@ -17,6 +17,7 @@
   display: inline-block;
   width: 56px;
   height: 56px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: 17px solid $input-bg-color;
   background-color: $input-bg-color;
@@ -40,6 +41,23 @@
 .radio__input:checked:active ~ .radio__decorator {
   border-color: $binary-input-active-color;
   background-color: rgb(164, 164, 164);
+}
+
+.radio__input:disabled {
+  & ~ .radio__decorator {
+    background-color: $input-disabled;
+    border-color: $input-disabled;
+  }
+
+  & ~ .radio__label {
+    color: $input-label-disabled;
+  }
+}
+
+.radio__input:checked:disabled {
+  & ~ .radio__decorator {
+    background-color: #bbbbbb;
+  }
 }
 
 @media (min-width: $tablet-width) {

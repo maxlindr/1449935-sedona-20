@@ -17,6 +17,21 @@
   text-transform: uppercase;
   background-color: $basic-blue;
   color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-blue-2;
+  }
+
+  &:active {
+    background-color: $basic-blue-3;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+
+  &:disabled,
+  &.button--disabled {
+    background-color: $input-hover-bg-color;
+  }
 }
 
 .button--form {

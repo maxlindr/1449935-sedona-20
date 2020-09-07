@@ -10,6 +10,7 @@
   </head>
 <body>
   <div class="page-wrapper">
+    <!-- Класс nav-menu--hidden скрывает меню -->
     <header class="page-header">
       <nav class="nav-menu nav-menu--no-js">
         <h2 class="visually-hidden">Навигационное меню</h2>
@@ -29,6 +30,11 @@
           </picture>
         </a>
       </div>
+      <!--
+        За вид кнопки отвечают взаимоисключающие классы page-header__toggle-btn--close и page-header__toggle-btn--open.
+        При открытом меню кнопка должна иметь класс page-header__toggle-btn--close.
+        При закрытом меню кнопка должна иметь класс page-header__toggle-btn--open.
+      -->
       <button class="button page-header__toggle-btn page-header__toggle-btn--open page-header__toggle-btn--no-js" type="button" hidden>
         <span class="visually-hidden">Открыть/закрыть меню</span>
       </button>
