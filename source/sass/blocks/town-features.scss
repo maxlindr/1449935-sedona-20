@@ -20,14 +20,14 @@
   margin-left: 69px;
 }
 
-.town-feature__title {
+.town-features__title {
   margin: 0 0 15px 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
 }
 
-.town-feature__description {
+.town-features__description {
   margin: 0;
   font-size: 14px;
   line-height: 21px;
@@ -63,11 +63,11 @@
 
 // Переносы строки
 
-.town-feature__food-description-br {
+.town-features__food-description-br {
   display: none;
 }
 
-.town-feature__souvenir-description-br {
+.town-features__souvenir-description-br {
   display: none;
 }
 
@@ -98,7 +98,7 @@
     margin-bottom: 61px;
   }
 
-  .town-feature__title {
+  .town-features__title {
     font-size: 21px;
     margin-bottom: 23px;
   }
@@ -147,7 +147,7 @@
     }
   }
 
-  .town-feature__food-description-br {
+  .town-features__food-description-br {
     display: inline;
   }
 }
@@ -172,7 +172,7 @@
     padding-right: 78px;
   }
 
-  .town-feature__souvenir-description-br {
+  .town-features__souvenir-description-br {
     display: inline;
   }
 }
