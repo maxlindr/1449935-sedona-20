@@ -2,6 +2,10 @@
   display: block;
   position: absolute;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
 }
 
 .nav-menu--no-js {
@@ -84,7 +88,8 @@
     text-align: center;
   }
 
-  .nav-menu__item:nth-child(2) {
+  .nav-menu__item:nth-child(2),
+  .nav-menu__item:nth-child(6) {
     // здесь правое поле в качестве разделителя эелементов меню под логотипом,
     // не позволяет занимать это место другими элементами.
     margin-right: 20%;

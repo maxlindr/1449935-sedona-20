@@ -137,14 +137,13 @@ $white-like: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='ht
 
   .gallery__figcaption {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: $input-bg-color;
   }
 
   .gallery__figcaption-block {
-    margin: 14px 0 18px 20px;
+    margin: 14px 20px 18px;
   }
 
   .gallery__like-block {
