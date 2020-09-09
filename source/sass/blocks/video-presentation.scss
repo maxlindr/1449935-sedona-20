@@ -18,8 +18,23 @@
   color: $dark-gray;
 }
 
+.video-presentation__image {
+  position: absolute;
+  width: 100%;
+  height: 201px;
+  object-fit: cover;
+  object-position: center;
+
+  @media (min-width: $tablet-width) {
+    height: 500px;
+  }
+}
+
 .video-presentation__video {
   margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
 }
 
 @media (min-width: $tablet-width) {
@@ -43,6 +58,10 @@
 
   .video-presentation__video {
     margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 648px;
+    height: 500px;
   }
 }
 
@@ -62,5 +81,10 @@
 
   .video-presentation__video {
     margin-top: 78px;
+  }
+
+  .video-presentation__video {
+    width: 800px;
+    height: 500px;
   }
 }
