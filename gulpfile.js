@@ -46,7 +46,11 @@ const fonts = () => gulp.src('source/fonts/*').pipe(gulp.dest('build/fonts'));
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(replace('style.css', 'style.min.css'))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      removeComments: true,
+    }))
     .pipe(gulp.dest('build'));
 }
 
